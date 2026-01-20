@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Một điều chỉ mình em biết</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #fff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff6fa5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4d94;
+}
+
+#message {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+  white-space: pre-line;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="loginBox">
+  <h2>🔐 Nhập mật khẩu</h2>
+  <input type="password" id="pass" placeholder="Mật khẩu">
+  <br>
+  <button onclick="checkPass()">Mở thư 💌</button>
+</div>
+
+<div class="box" id="contentBox" style="display:none;">
+  <h2>💖 Gửi em</h2>
+  <button onclick="showMessage()">Chạm vào đây</button>
+
+  <div id="message">
+    <!-- ✏️ SỬA NỘI DUNG THƯ Ở ĐÂY -->
+Xin chào tình yêu của em,
+
+Đọc bất cứ khi nào anh buồn hay vui.
+Khi anh nhớ em, cần em và cần được
+ủng hộ, củng cố tinh thần khi hai
+ta xảy ra mâu thuẫn hay khi em giận anh hoặc khi anh giận em T.T. Và kể cả khi mình silent treatment với nhau...
+Đọc thật từ từ và suy ngằm để thấy
+được 
+tình yêu và em bé của anh
+trong đó!
+
+Em xin chân thành cảm ơn anh 
+• Vì anh đã sinh ra và lớn lên khoẻ mạnh
+• Vì anh đã xuất hiện trong cuộc đời của em
+• Vì anh đã chấp nhận yêu em
+• Vì anh luôn nuông chiều và nhường nhịn em 
+• Vì anh đã yêu em ngay cả những lúc em không xinh và cũng không hoàn hảo
+
+Em thật sự rất yêu thương anh, em luôn thầm cảm ơn ông trời vì đã cho em cơ hội được bên anh, được yêu anh và đồng hành cùng anh là điều em không thể ngờ nhưng điều cực kì bất ngờ này lại làm em rất hạnh phúc, ở bên anh em mới biết thế nào là được yêu, em có thể thoải mái giận dỗi vì em biết anh sẽ luôn dỗ em, anh sẵn sàng chiều chuộng và chấp nhận mọi yêu cầu của em, anh luôn giành cho em những điều tốt đẹp nhất mà anh có thể mang lại, em nghĩ nếu không là anh thì chắc sẽ không là ai cả
+    Em cũng đã từng làm anh tổn thương, em luôn dằn vặt bản thân vì điều đó nên em luôn tự bảo bản thân rằng anh cũng cần được yêu, anh cần được bù đắp nhiều hơn em, nếu như thuận lợi và không có gì trắc trở thì hãy để em yêu anh, thương anh và bù đắp cho anh bằng cả đời này, cả kiếp người của em
+em hy vọng tình yêu của em giành cho anh đủ lớn để anh không phải tủi thân hay thiệt thòi về bất cứ điều gì
+
+Em cảm ơn anh rất nhiều vì đã đến bên cuộc đời em, giữa thế giới rộng lớn đông đúc này em đã gặp được anh, tình yêu của cuộc đời em 🤍 Em mong anh sẽ mãi ở bên em dù đôi khi em có hơi bất cẩn và vụn về, đôi khi em vô tình làm tổn thương anh vì tính tình trẻ con của em nhưng em mong anh sẽ nói ra những điều đó để em có thể sửa. Em không thể hứa trước điều gì nhưng em muốn cho anh biết anh là người em muốn đi cùng dù có phải trải qua bất kì chuyện gì khó khăn đi nữa.
+
+Nếu có phải bắt em dập đầu cả trăm nghìn lần để đổi lấy thêm được 1 kiếp yêu anh thì em vẫn sẽ làm
+
+Đến cuối cùng dù có chuyện gì em vẫn muốn được yêu anh, tình yêu của đời em
+
+– Người viết –
+  </div>
+</div>
+
+<script>
+const PASSWORD = "nguyenphucquykhang22102007"; 
+// ✏️ ĐỔI MẬT KHẨU Ở ĐÂY
+
+function checkPass() {
+  const input = document.getElementById("pass").value;
+  if (input === PASSWORD) {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("contentBox").style.display = "block";
+  } else {
+    alert("Sai mật khẩu rồi 💔");
+  }
+}
+
+function showMessage() {
+  document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
